@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container">
+    <div class="request-wrapper">
+        
+        <!-- الجهة الأولى: نموذج الطلب -->
+        <div class="form-side">
+            <div class="form-card">
+                <h2 class="lang-en">Request MediByte for Your Organization</h2>
+                <h2 class="lang-ar">طلب MediByte لمنشأتك</h2>
+                <p class="form-subtitle">
+                    <span class="lang-en">Fill out the form below to request MediByte for your school, company, or public facility.</span>
+                    <span class="lang-ar">يرجى تعبئة النموذج لطلب الجهاز لمدرستك أو شركتك أو منشأتك العامة.</span>
+                </p>
+
+                <form action="/submit_request" method="POST" class="styled-form">
+                    <div class="input-group">
+                        <label class="lang-en">Organization Name</label>
+                        <label class="lang-ar">اسم المنشأة</label>
+                        <input type="text" name="org" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="lang-en">Contact Person</label>
+                        <label class="lang-ar">الشخص المسؤول</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="lang-en">Email Address</label>
+                        <label class="lang-ar">البريد الإلكتروني</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="lang-en">Type of Facility</label>
+                        <label class="lang-ar">نوع المنشأة</label>
+                        <select name="type">
+                            <option value="School">School | مدرسة</option>
+                            <option value="Company">Company | شركة</option>
+                            <option value="Public">Public | مكان عام</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label class="lang-en">Number of Devices Required</label>
+                        <label class="lang-ar">عدد الأجهزة المطلوبة</label>
+                        <input type="number" name="qty" min="1">
+                    </div>
+                    <button type="submit" class="btn-turquoise" style="width: 100%;">Submit Request</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- الجهة الثانية: ميزات مختصرة -->
+        <div class="features-side">
+            <h2 class="side-title lang-en">Key Benefits</h2>
+            <h2 class="side-title lang-ar">المميزات الرئيسية</h2>
+            <div class="features-vertical-list">
+                <div class="feature-item-card"><i class="fas fa-brain icon-blue"></i><p>AI Injury Detection</p></div>
+                <div class="feature-item-card"><i class="fas fa-heartbeat icon-red"></i><p>Real-time Vital Monitoring</p></div>
+                <div class="feature-item-card"><i class="fas fa-comment-medical icon-cyan"></i><p>Interactive Guidance</p></div>
+                <div class="feature-item-card"><i class="fas fa-bell icon-yellow"></i><p>Smart Alerts</p></div>
+            </div>
+            <div style="margin-top: 30px; padding: 20px; background: rgba(0, 209, 255, 0.05); border-radius: 15px; border: 1px dashed var(--turquoise);">
+                <p class="lang-en"><b>What happens next?</b><br>Confirmation email & team contact within 24–48 hours.</p>
+                <p class="lang-ar"><b>ماذا يحدث بعد الطلب؟</b><br>رسالة تأكيد وتواصل من فريقنا خلال 24-48 ساعة.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

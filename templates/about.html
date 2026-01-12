@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+        <div style="flex: 1.2; min-width: 300px;">
+            <h2 style="color: var(--navy);" class="lang-en">Who We Are</h2>
+            <h2 style="color: var(--navy);" class="lang-ar">من نحن</h2>
+            <p class="lang-en">MediByte is an innovative healthcare project designed to improve emergency response and first aid accessibility using AI and IoT technologies. Our goal is to provide fast, accurate, and user-friendly first aid support anytime and anywhere.</p>
+            <p class="lang-ar">MediByte هو مشروع رعاية صحية مبتكر مصمم لتحسين الاستجابة للطوارئ والوصول إلى الإسعافات الأولية باستخدام تقنيات الذكاء الاصطناعي وإنترنت الأشياء. هدفنا هو تقديم دعم إسعافي سريع ودقيق وسهل الاستخدام في أي وقت ومكان.</p>
+            
+            <h3 style="color: var(--turquoise); margin-top: 30px;" class="lang-en">Our Vision</h3>
+            <h3 style="color: var(--turquoise); margin-top: 30px;" class="lang-ar">رؤيتنا</h3>
+            <p class="lang-en">To enhance public safety and reduce emergency response time through smart medical technology.</p>
+            <p class="lang-ar">تعزيز السلامة العامة وتقليل وقت الاستجابة للطوارئ من خلال التكنولوجيا الطبية الذكية.</p>
+        </div>
+        <div style="flex: 1;">
+            <img src="/static/images/m99.png" style="width: 100%; max-width: 500px;">
+        </div>
+    </div>
+
+    <!-- لماذا MediByte -->
+    <h2 style="text-align: center; margin-top: 80px;" class="lang-en">Why MediByte?</h2>
+    <h2 style="text-align: center; margin-top: 80px;" class="lang-ar">لماذا MediByte؟</h2>
+    <div class="card-grid">
+        <div class="info-card"><i class="fas fa-brain"></i><p class="lang-en">AI-powered injury recognition</p><p class="lang-ar">التعرف على الإصابات بالذكاء الاصطناعي</p></div>
+        <div class="info-card"><i class="fas fa-stethoscope"></i><p class="lang-en">Instant health measurements</p><p class="lang-ar">قياسات صحية فورية</p></div>
+        <div class="info-card"><i class="fas fa-video"></i><p class="lang-en">Step-by-step instructions</p><p class="lang-ar">إرشادات خطوة بخطوة</p></div>
+        <div class="info-card"><i class="fas fa-home"></i><p class="lang-en">Designed for all spaces</p><p class="lang-ar">مصمم لجميع الأماكن</p></div>
+    </div>
+</section>
+{% endblock %}

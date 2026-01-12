@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="main-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediByte | Smart Medical Tech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Medi<span style="color:var(--turquoise)">Byte</span></div>
+        
+        <ul class="nav-links">
+            <li><a href="/"><span class="lang-en">Home</span><span class="lang-ar">الرئيسية</span></a></li>
+            <li><a href="/product"><span class="lang-en">Product</span><span class="lang-ar">المنتج</span></a></li>
+            <li><a href="/about"><span class="lang-en">About</span><span class="lang-ar">من نحن</span></a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="/request-product" class="btn-primary">
+                <span class="lang-en">Request</span><span class="lang-ar">طلب المنتج</span>
+            </a>
+            <!-- زر واحد فقط وبدالة صحيحة -->
+            <button onclick="toggleLanguage()" id="lang-btn" class="lang-toggle-btn">العربية</button>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div>
+                <span class="logo">MediByte</span>
+                <p class="lang-en">Next-gen AI First Aid Solutions.</p>
+                <p class="lang-ar">الجيل القادم من حلول الإسعافات الذكية.</p>
+            </div>
+            <div class="footer-contact">
+                <h4 class="lang-en">Contact</h4><h4 class="lang-ar">تواصل معنا</h4>
+                <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                <p><i class="fas fa-envelope"></i> info@medibyte.com</p>
+            </div>
+            <div>
+                <h4 class="lang-en">Follow Us</h4><h4 class="lang-ar">تابعنا</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    // دالة تطبيق اللغة
+    function applyLanguage(lang) {
+        const htmlTag = document.documentElement;
+        const btn = document.getElementById('lang-btn');
+        
+        htmlTag.setAttribute('lang', lang);
+        htmlTag.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        
+        if (btn) {
+            btn.innerText = (lang === 'ar' ? "English" : "العربية");
+        }
+        
+        localStorage.setItem('medibyte-lang', lang);
+    }
+
+    // دالة التبديل
+    function toggleLanguage() {
+        const currentLang = document.documentElement.getAttribute('lang') || 'en';
+        const newLang = currentLang === 'en' ? 'ar' : 'en';
+        applyLanguage(newLang);
+    }
+
+    // التنفيذ عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('medibyte-lang') || 'en';
+        applyLanguage(savedLang);
+    });
+</script>
+</body>
+</html>

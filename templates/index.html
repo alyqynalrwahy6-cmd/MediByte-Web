@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="hero-main">
+    <div class="container hero-flex">
+        <!-- جهة النصوص -->
+        <div class="hero-text">
+            <h1 class="lang-en">Smart First Aid, Powered by AI</h1>
+            <h1 class="lang-ar">إسعافات أولية ذكية، مدعومة بالذكاء الاصطناعي</h1>
+            
+            <p class="lang-en">MediByte is an intelligent first aid box that uses AI and smart sensors to detect injuries and guide users with instant medical assistance.</p>
+            <p class="lang-ar">MediByte هو صندوق إسعافات أولية ذكي يستخدم الذكاء الاصطناعي والمستشعرات الذكية للكشف عن الإصابات وتوجيه المستخدمين بمساعدة طبية فورية.</p>
+            
+            <div class="hero-btns">
+                <a href="/product" class="btn-turquoise">
+                    <span class="lang-en">Explore Product</span><span class="lang-ar">استكشف المنتج</span>
+                </a>
+                <a href="/request-product" class="btn-turquoise" style="background: transparent; border: 1px solid var(--turquoise);">
+                    <span class="lang-en">Request Device</span><span class="lang-ar">طلب الجهاز</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- جهة الصورة -->
+        <div class="hero-image">
+            <img src="/static/images/m88.png" alt="MediByte AI Box">
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Quick Features List -->
+<section class="container" style="text-align: center;">
+    <div class="card-grid">
+        <div class="info-card"><i class="fas fa-eye"></i><p class="lang-en">Automatic Injury Detection</p><p class="lang-ar">كشف تلقائي للإصابات</p></div>
+        <div class="info-card"><i class="fas fa-heartbeat"></i><p class="lang-en">Real-time Vital Signs Monitoring</p><p class="lang-ar">مراقبة المؤشرات الحيوية</p></div>
+        <div class="info-card"><i class="fas fa-comment-medical"></i><p class="lang-en">Interactive First Aid Guidance</p><p class="lang-ar">إرشادات إسعافية تفاعلية</p></div>
+        <div class="info-card"><i class="fas fa-bell"></i><p class="lang-en">Smart Emergency Alerts</p><p class="lang-ar">تنبيهات طوارئ ذكية</p></div>
+    </div>
+</section>
+{% endblock %}

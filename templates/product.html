@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container" style="text-align: center;">
+    <h2 style="color: var(--navy);" class="lang-en">Inside MediByte Smart First Aid Box</h2>
+    <h2 style="color: var(--navy);" class="lang-ar">داخل صندوق MediByte الذكي</h2>
+    <p class="lang-en">MediByte combines medical supplies with smart technology to deliver a complete first aid solution.</p>
+    <p class="lang-ar">يجمع MediByte بين المستلزمات الطبية والتكنولوجيا الذكية لتقديم حل إسعافي متكامل.</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 40px;">
+        <div class="info-card" style="flex: 1;"><img src="/static/images/m22.png" style="width: 100%;"><h4 class="lang-en">Exterior View</h4><h4 class="lang-ar">المظهر الخارجي</h4></div>
+        <div class="info-card" style="flex: 1;"><img src="/static/images/33m.png" style="width: 100%;"><h4 class="lang-en">Interior View</h4><h4 class="lang-ar">المظهر الداخلي</h4></div>
+    </div>
+
+    <!-- كيف يعمل -->
+    <h2 style="margin-top: 80px;" class="lang-en">How It Works?</h2>
+    <h2 style="margin-top: 80px;" class="lang-ar">كيف يعمل الجهاز؟</h2>
+    <div class="card-grid">
+        <div class="info-card"><img src="/static/images/w1.png" style="width: 260px;"><p class="lang-en">1. Detects user automatically</p><p class="lang-ar">1. يكتشف المستخدم تلقائياً</p></div>
+        <div class="info-card"><img src="/static/images/w2.png" style="width: 260px;"><p class="lang-en">2. Scans the injury</p><p class="lang-ar">2. يمسح الإصابة بالكاميرا</p></div>
+        <div class="info-card"><img src="/static/images/w3.png" style="width: 260px;"><p class="lang-en">3. Measures vital signs</p><p class="lang-ar">3. يقيس المؤشرات الحيوية</p></div>
+    </div>
+
+    <!-- المكونات الأساسية -->
+    <div class="info-card" style="margin-top: 40px; text-align: left;">
+        <h3 class="lang-en">Core Components:</h3>
+        <h3 class="lang-ar">المكونات الأساسية:</h3>
+        <ul style="line-height: 2;">
+            <li>✔ <span class="lang-en">Touch display screen</span><span class="lang-ar">شاشة عرض تعمل باللمس</span></li>
+            <li>✔ <span class="lang-en">Camera and sensors</span><span class="lang-ar">كاميرا ومستشعرات</span></li>
+            <li>✔ <span class="lang-en">AI processing unit</span><span class="lang-ar">وحدة معالجة الذكاء الاصطناعي</span></li>
+            <li>✔ <span class="lang-en">Organized medical compartments</span><span class="lang-ar">أقسام طبية منظمة</span></li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
